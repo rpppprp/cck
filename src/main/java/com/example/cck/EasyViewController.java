@@ -19,7 +19,7 @@ public class EasyViewController {
 		session.removeAttribute("tempUser");
 		session.removeAttribute("authType");
 
-		return "/easyview/index";
+		return "easyview/index";
 	}
 
 	// 로그인
