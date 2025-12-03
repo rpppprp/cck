@@ -1,0 +1,29 @@
+<html lagn="ko" xmlns:th="http://www.thymeleaf.org">
+<!--footerFragment 선언-->
+<div th:fragment="subTabsLayout(tabsIndex)" class="sub-tab-wrap">
+
+	<div class="sub-gnb-tab swiper">
+	    <ul class="tab-track swiper-wrapper">
+	        <li class="tab-item swiper-slide" th:classappend="${tabsIndex} == 1 ? 'on' : ''">
+	        	<a href="/easyview/management/01">관리카드</a>
+	        </li>
+	        <li class="tab-item swiper-slide" th:classappend="${tabsIndex} == 2 ? 'on' : ''">
+	        	<a href="/easyview/rental/">내 렌탈 정보</a>
+	        </li>
+	        <li class="tab-item swiper-slide"  th:classappend="${tabsIndex} == 3 ? 'on' : ''">
+	        	<a href="/easyview/product/">제품 안내</a>
+	        </li>
+	        <li class="tab-item swiper-slide" th:classappend="${tabsIndex} == 4 ? 'on' : ''">
+	        	<a href="/easyview/support/01">고객 지원</a>
+	        </li>
+	        <li class="tab-item swiper-slide" th:classappend="${tabsIndex} == 5 ? 'on' : ''">
+	        	<a href="/easyview/supplies/">소모품 구매</a>
+	        </li>
+	        <li class="tab-item swiper-slide" th:classappend="${tabsIndex} == 6 ? 'on' : ''">
+	        	<a href="/easyview/request/">AS신청</a>
+	        </li>
+	    </ul>
+	</div>
+
+</div>
+</html>

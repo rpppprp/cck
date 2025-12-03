@@ -1,0 +1,42 @@
+<html lagn="ko" xmlns:th="http://www.thymeleaf.org">
+<!--bottom Navigation 선언-->
+<div th:fragment="bottomNavigation(selectedIndex)" class="bottom-nav">
+
+	<div class="bottom-navigation">
+        <nav class="bottom-nav">
+            <ul class="wrap">
+                <li class="bottom-home" th:classappend="${selectedIndex} == 1 ? 'on' : ''">
+                    <a href="/easyview/">
+                        <svg class="icon-sm">
+                            <use xlink:href="/images/easyview/icons/spriteImg.svg#home" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="bottom-card" th:classappend="${selectedIndex} == 2 ? 'on' : ''">
+                    <a href="/easyview/management/01">
+                        <svg class="icon-sm">
+                            <use xlink:href="/images/easyview/icons/spriteImg.svg#card" />
+                        </svg>
+                    </a>
+                </li>
+				<li class="bottom-rental" th:classappend="${selectedIndex} == 3 ? ' on' : ''">
+				    <a href="/easyview/rental/">
+				        <svg class="icon-sm">
+				            <use xlink:href="/images/easyview/icons/spriteImg.svg#config" />
+				        </svg>
+				    </a>
+				</li>
+                <li class="bottom-menu">
+                    <a>
+                        <svg class="icon-sm">
+                            <use xlink:href="/images/easyview/icons/spriteImg.svg#burger" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+	</div>
+	
+	
+</div>
+</html>

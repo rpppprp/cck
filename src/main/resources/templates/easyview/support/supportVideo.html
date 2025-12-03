@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/easyview/layout/easyViewLayout}">
+
+<body>
+    <th:block layout:fragment="header" th:replace="/easyview/fragments/headerLayout :: headerSubLayout(title='고객 지원')"></th:block>
+
+    <main class="main">
+        <div layout:fragment="content" class="sub-container">
+        	<section class="support-title-area">
+        		<div class="wrap">
+	                <div class="sub-head-area">
+	                    <h1 class="tit">
+	                        고객님,<br>무엇을 도와드릴까요?
+	                    </h1>
+	                    <p class="txt">
+							제품에 이상이 있나요?<br>
+							쿠쿠 제품 관리 가이드로 셀프 진단을 해보세요.<br>
+							번거로운 AS 신청 없이 바로 해결 할 수 있습니다.<br>
+	                    </p>
+	                </div>
+        		</div>
+        	</section>
+        	<section class="supoort-info-area">
+        		<div class="wrap">
+        			<div class="support-tab">
+		                <ul class="sub-tab cols-3 rounded-lg">
+		                    <li class="sub-item rounded-lg" data-value="support-item01">
+		                        <a href="/easyview/support/01">
+		                            <svg class="icon-sm">
+		                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+		                            </svg>
+		                            <p class="txt">사용설명서</p>
+		                        </a>
+		                    </li>
+		                    <li class="sub-item rounded-lg on" data-value="support-item02">
+		                        <a href="/easyview/support/02">
+		                            <svg class="icon-sm">
+		                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+		                            </svg>
+		                            <p class="txt">서비스영상</p>
+		                        </a>
+		                    </li>
+		                    <li class="sub-item rounded-lg"  data-value="support-item03">
+		                        <a href="/easyview/support/03">
+		                            <svg class="icon-sm">
+		                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+		                            </svg>
+		                            <p class="txt">FAQ</p>
+		                        </a>
+		                    </li>
+		                </ul>
+        			</div>
+        			<div class="support-content">
+        				<div class="sub-tab-content support-video" id="support-item02">
+	        				<div class="video-results results-wrap">
+	        					<div class="results-code">
+	        						CF-KFF1410NW
+	        					</div>
+	        					<p class="results-number">
+	        						검색결과 총 <b class="number">15</b> 건
+	        					</p>
+	        				</div>
+	        				<div class="support-select-wrap select-wrap">
+        						<select class="slt" id="support-cate-select">
+        							<option value="전체" selected>전체</option>
+        							<option value="관리방법">관리방법</option>
+        							<option value="고장자가진단">고장자가진단</option>
+        						</select>
+	        				</div>
+	        				<div class="support-video-list">
+	        					<div class="support-video-box">
+	        						<a>
+		        						<div class="support-video-icon">
+				                            <svg class="icon-sm">
+				                                <use xlink:href="/images/easyview/icons/spriteImg.svg#play" />
+				                            </svg>
+		        						</div>
+		        						<div class="support-video-info">
+		        							<span class="support-video-cate">관리방법</span>
+		        							<p class="support-video-subject">[쿠쿠]정수기 CP-AMS 정량 출수 기능(한컵, 반컵, 연속) 과 사용방법</p>
+		        						</div>
+	        						</a>
+	        					</div>
+	        					<div class="support-video-box">
+	        						<a>
+		        						<div class="support-video-icon">
+				                            <svg class="icon-sm">
+				                                <use xlink:href="/images/easyview/icons/spriteImg.svg#play" />
+				                            </svg>
+		        						</div>
+		        						<div class="support-video-info">
+		        							<span class="support-video-cate">관리방법</span>
+		        							<p class="support-video-subject">[쿠쿠] 정수기 CP-AMS 화면 절전 기능설명과 설정방법</p>
+		        						</div>
+	        						</a>
+	        					</div>
+	        					<div class="support-video-box">
+	        						<a>
+		        						<div class="support-video-icon">
+				                            <svg class="icon-sm">
+				                                <use xlink:href="/images/easyview/icons/spriteImg.svg#play" />
+				                            </svg>
+		        						</div>
+		        						<div class="support-video-info">
+		        							<span class="support-video-cate">관리방법</span>
+		        							<p class="support-video-subject">[쿠쿠]정수기 CP-AMS 정량 출수 기능(한컵, 반컵, 연속) 과 사용방법</p>
+		        						</div>
+	        						</a>
+	        					</div>
+	        					<div class="support-video-box">
+	        						<a>
+		        						<div class="support-video-icon">
+				                            <svg class="icon-sm">
+				                                <use xlink:href="/images/easyview/icons/spriteImg.svg#play" />
+				                            </svg>
+		        						</div>
+		        						<div class="support-video-info">
+		        							<span class="support-video-cate">관리방법</span>
+		        							<p class="support-video-subject">[쿠쿠] 정수기 CP-AMS 화면 절전 기능설명과 설정방법</p>
+		        						</div>
+	        						</a>
+	        					</div>
+	        					<div class="support-video-box">
+	        						<a>
+		        						<div class="support-video-icon">
+				                            <svg class="icon-sm">
+				                                <use xlink:href="/images/easyview/icons/spriteImg.svg#play" />
+				                            </svg>
+		        						</div>
+		        						<div class="support-video-info">
+		        							<span class="support-video-cate">관리방법</span>
+		        							<p class="support-video-subject">[쿠쿠]정수기 CP-AMS 정량 출수 기능(한컵, 반컵, 연속) 과 사용방법</p>
+		        						</div>
+	        						</a>
+	        					</div>
+	        					<div class="support-video-box">
+	        						<a>
+		        						<div class="support-video-icon">
+				                            <svg class="icon-sm">
+				                                <use xlink:href="/images/easyview/icons/spriteImg.svg#play" />
+				                            </svg>
+		        						</div>
+		        						<div class="support-video-info">
+		        							<span class="support-video-cate">관리방법</span>
+		        							<p class="support-video-subject">[쿠쿠] 정수기 CP-AMS 화면 절전 기능설명과 설정방법</p>
+		        						</div>
+	        						</a>
+	        					</div>
+	        					<div class="support-video-box">
+	        						<a>
+		        						<div class="support-video-icon">
+				                            <svg class="icon-sm">
+				                                <use xlink:href="/images/easyview/icons/spriteImg.svg#play" />
+				                            </svg>
+		        						</div>
+		        						<div class="support-video-info">
+		        							<span class="support-video-cate">관리방법</span>
+		        							<p class="support-video-subject">[쿠쿠]정수기 CP-AMS 정량 출수 기능(한컵, 반컵, 연속) 과 사용방법</p>
+		        						</div>
+	        						</a>
+	        					</div>
+	        					<div class="support-video-box">
+	        						<a>
+		        						<div class="support-video-icon">
+				                            <svg class="icon-sm">
+				                                <use xlink:href="/images/easyview/icons/spriteImg.svg#play" />
+				                            </svg>
+		        						</div>
+		        						<div class="support-video-info">
+		        							<span class="support-video-cate">관리방법</span>
+		        							<p class="support-video-subject">[쿠쿠] 정수기 CP-AMS 화면 절전 기능설명과 설정방법</p>
+		        						</div>
+	        						</a>
+	        					</div>
+	        				</div>
+        				</div>
+        			</div>
+        		</div>
+        	</section>
+        </div>
+    </main>
+</body>
+</html>

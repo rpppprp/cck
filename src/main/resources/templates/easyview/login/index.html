@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/easyview/layout/easyViewLayout}">
+<head>
+	<style>
+		.sub-tab-wrap {
+			display:none;
+		}
+	</style>
+</head>
+<body>
+    <th:block layout:fragment="header" th:replace="/easyview/fragments/headerLayout :: headerMypageLayout(title='로그인')"></th:block>
+
+    <main class="main">
+        <div layout:fragment="content" class="sub-container">
+	        <section class="login-title-area">
+	            <div class="wrap">
+	                <div class="login-title-wrap">
+	                    <h1 class="tit">
+	                        쿠쿠몰<br>
+	                        회원 로그인
+	                    </h1>
+	                </div>
+	            </div>
+	        </section>
+	
+	        <section class="login-input-area">
+	            <div class="wrap">
+	                <div class="login-input-wrap">
+	                    <div class="lg-input-item">
+	                        <input type="text" class="input-txt" id="login-id" placeholder="아이디를 입력해주세요.">
+	                    </div>
+	                    <div class="lg-input-item">
+	                        <input type="password" class="input-txt" id="login-pwd" placeholder="비밀번호를 입력해주세요.">
+	                    </div>
+	                </div>
+	                <div class="login-etc-wrap">
+	                    <a class="login-signup">회원가입</a>
+	                    <em>|</em>
+	                    <a class="login-find">아이디/비밀번호 찾기</a>
+	                </div>
+	                <div class="login-btn-wrap">
+	                    <button class="btn wide-btn bg-b">
+	                        <span class="txt">로그인</span>
+	                    </button>
+	                </div>
+	                <div class="login-sns-wrap">
+	                    <a class="kakao-btn">
+	                    	<img src="/images/easyview/kakao-icon.png">
+	                    </a>
+	                    <a class="naver-btn">
+	                    	<img src="/images/easyview/naver-icon.png">
+	                    </a>
+	                    <a class="apple-btn">
+	                    	<img src="/images/easyview/apple-icon.png">
+	                    </a>
+	                </div>
+	            </div>
+	        </section>
+        </div>
+    </main>
+</body>
+</html>

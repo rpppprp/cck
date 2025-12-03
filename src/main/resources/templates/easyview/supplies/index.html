@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/easyview/layout/easyViewLayout}">
+<body>
+    <th:block layout:fragment="header" th:replace="/easyview/fragments/headerLayout :: headerSubLayout(title='소모품 구매')"></th:block>
+
+    <main class="main">
+        <div layout:fragment="content" class="sub-container">
+        	<section class="supplies-title-area">
+        		<div class="wrap">
+	                <div class="sub-head-area">
+	                    <h1 class="tit">
+	                        필요한 <span class="primary">소모품</span>을<br>빠르게 구매해 보세요.
+	                    </h1>
+	                </div>
+        		</div>
+        	</section>
+        	
+        	<section class="supplies-search-area">
+        		<div class="wrap">
+	        		<form class="supplies-seaech-wrap">
+	        			<input type="text" class="search-input rounded-lg" placeholder="제품명을 입력해주세요.">
+	        			<button class="search-btn btn" type="submit">
+							<svg class="icon-sm">
+								<use xlink:href="/images/easyview/icons/spriteImg.svg#search" />
+							</svg>
+	        			</button>
+	        		</form>
+	        		<div class="supplies-btn-wrap">
+	        			<div class="sub-title-wrap">
+	        				<h1 class="sub-tit">
+	        					제품군 선택
+	        				</h1>
+	        			</div>
+	        			<div class="supplies-btn-track">
+	        				<a class="supplies-btn-item" onclick="openPopUp('/easyview/popup/suppliesDetail')">
+	        					<div class="supplies-icon rounded-md bg-g btn">
+									<svg class="icon-lg">
+										<use xlink:href="/images/easyview/icons/spriteImg.svg#supplies-01" />
+									</svg>
+	        					</div>
+	        					<p class="txt">내솥류</p>
+	        				</a>
+	        				<a class="supplies-btn-item" onclick="openPopUp('/easyview/popup/suppliesDetail')">
+	        					<div class="supplies-icon rounded-md bg-g btn">
+									<svg class="icon-lg">
+										<use xlink:href="/images/easyview/icons/spriteImg.svg#supplies-02" />
+									</svg>
+	        					</div>
+	        					<p class="txt">패킹류</p>
+	        				</a>
+	        				<a class="supplies-btn-item" onclick="openPopUp('/easyview/popup/suppliesDetail')">
+	        					<div class="supplies-icon rounded-md bg-g btn">
+									<svg class="icon-lg">
+										<use xlink:href="/images/easyview/icons/spriteImg.svg#supplies-03" />
+									</svg>
+	        					</div>
+	        					<p class="txt">필터류</p>
+	        				</a>
+	        			</div>
+	        		</div>
+        		</div>
+        	</section>
+        </div>
+    </main>
+</body>
+</html>

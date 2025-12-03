@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/easyview/layout/easyViewLayout}">
+<body>
+    <th:block layout:fragment="header" th:replace="/easyview/fragments/headerLayout :: headerSubLayout(title='AS신청')"></th:block>
+
+    <main class="main">
+        <div layout:fragment="content" class="sub-container">
+        	<section class="request-title-area">
+        		<div class="wrap">
+	                <div class="sub-head-area">
+	                    <h1 class="tit">
+	                        AS 신청
+	                    </h1>
+	                    <p class="txt">
+							고객님께서 원하시는 곳으로<br>서비스 닥터가 직접 방문합니다.
+	                    </p>
+	                </div>
+        		</div>
+        	</section>
+        	<div class="line"></div>
+        	<section class="request-info-area">
+        		<div class="wrap">
+        			<div class="sub-title-wrap">
+        				<h1 class="sub-tit">
+        					AS 신청 전 유의사항
+        				</h1>
+        			</div>
+        			<ul class="request-info-txt bg-g rounded-sm">
+        				<li>온라인으로 신청 시 유상출장비 3천원 할인혜택과 원하시는 날짜와 시간을 직접 지정 하실 수 있습니다.</li>
+        				<li>렌탈 고객의 경우 렌탈 기간 동안에는 AS는 무상으로 진행 됩니다.(단, 고객님의 과실일 경우 유상으로 처리 됩니다.)</li>
+        				<li>렌탈 고객이 아닌 제품 구매 고객의 경우 렌탈이 아닌 일반으로 AS 접수를 진행해야 합니다.</li>
+        				<li>매트리스와 안마의자는 상담원을 통한 AS 접수를 진행해야 합니다.</li>
+        				<li>렌탈료 미납 고객은 접수가 불가능 합니다.</li>
+        			</ul>
+        			<div class="request-w-txt">
+        				<span class="rq-icon bg-g">
+	        				!
+        				</span>
+        				<p class="rq-txt">
+							유상수리제품은 수리내용과 상관없이 출장비가 발생됩니다. 성수기(6월~8월) 기간 내 출장비는 별도 요금 적용되어 <a>서비스 요금안내</a> 참고바랍니다.
+        				</p>
+        			</div>
+        			<div class="request-btn-wrap">
+        				<a class="service-info-btn btn bg-w rounded-lg"  onclick="openPopUp('/easyview/popup/requestServiceInfo')">
+        					서비스 요금 안내
+        				</a>
+        			</div>
+        		</div>
+        	</section>
+        	<div class="line"></div>
+        	<section class="request-apply-area">
+        		<form class="wrap">
+        			<div class="request-apply-wrap" id="apply-01">
+	        			<div class="request-tit-wrap">
+	        				<span class="num rounded-md bg-b">1</span>
+	        				<h3 class="tit">
+	        					구입시기와 증상을 선택해주세요.
+	        				</h3>
+	        			</div>
+	        			<div class="request-input-wrap bg-g">
+	        				<div class="request-product-card bg-w rounded-sm">
+	        					<div class="rq-product-thum">
+	        						<img src="/images/sample/sample_product.png">
+	        					</div>
+	        					<div class="rq-product-info">
+	        						<div class="rq-name">트윈프레셔 미니 전기압력밥솥(3인용)</div>
+	        						<div class="rq-code">CRP-TT0310FPP</div>
+	        					</div>
+	        				</div>
+	        				<div class="request-input-list">
+	        					<div class="rq-input-item">
+	        						<div class="input-tit">
+	        							<span>구입시기 선택</span><em class="primary">*</em>
+	        						</div>
+	        						<div class="select-wrap">
+		        						<select class="slt" id="rq-purchase-select">
+		        						  	<option disabled hidden selected>구입시기를 선택해주세요</option>
+		        							<option value="1개월 미만">1개월 미만</option>
+		        							<option value="1년 미만">1년 미만</option>
+		        							<option value="1년 이상">1년 이상</option>
+		        						</select>
+	        						</div>
+	        					</div>
+	        					<div class="rq-input-item">
+	        						<div class="input-tit">
+	        							<span>고장증상</span><em class="primary">*</em>
+	        						</div>
+	        						<div class="select-wrap">
+		        						<select class="slt" id="rq-broken-select">
+		        						  	<option disabled hidden selected>고장증상 선택</option>
+											<option value="구조/외관">구조/외관</option>
+											<option value="전원부 관련">전원부 관련</option>
+											<option value="소음 관련">소음 관련</option>
+											<option value="에러/표시창 관련">에러/표시창 관련</option>
+											<option value="냄새 관련">냄새 관련</option>
+											<option value="직접입력(10자이내)">직접입력(20자이내)</option>
+		        						</select>
+	        						</div>
+	        						<input type="text" class="input-txt broken-txt" id="rq-broken-input" maxlength="20" placeholder="20자 이내로 입력해주세요.">
+	        					</div>
+	        				</div>
+	        			</div>
+        			</div>
+        			<div class="request-apply-wrap" id="apply-02">
+	        			<div class="request-tit-wrap">
+	        				<span class="num rounded-md bg-b">2</span>
+	        				<h3 class="tit">
+	        					출장 서비스 희망일자를 선택해주세요.
+	        				</h3>
+	        			</div>
+	        			<div class="request-input-wrap bg-g">
+	        				<div class="request-input-list">
+	        					<div class="rq-input-item">
+	        						<div class="input-tit">
+	        							<span>희망일자</span><em class="primary">*</em>
+	        						</div>
+	        						<div class="rq-btn-wrap rows-table">
+		        						<div class="rq-btn">
+		        							<input type="radio" class="day-chk" id="rq_20251014" name="day-chk">
+		        							<label class="rq-day-btn btn wide-btn" for="rq_20251014">
+					                            <svg class="icon-sm">
+					                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+					                            </svg>
+		        								<p class="txt">2025-10-14 (화)</p>
+		        							</label>
+		        						</div>
+		        						<div class="rq-btn">
+		        							<input type="radio" class="day-chk" id="rq_20251016" name="day-chk">
+		        							<label class="rq-day-btn btn wide-btn" for="rq_20251016">
+					                            <svg class="icon-sm">
+					                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+					                            </svg>
+		        								<p class="txt">2025-10-16 (목)</p>
+		        							</label>
+		        						</div>
+		        						<div class="rq-btn">
+		        							<input type="radio" class="day-chk" id="rq_20251017" name="day-chk" checked>
+		        							<label class="rq-day-btn btn wide-btn" for="rq_20251017">
+					                            <svg class="icon-sm">
+					                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+					                            </svg>
+		        								<p class="txt">2025-10-17 (금)</p>
+		        							</label>
+		        						</div>
+	        						</div>
+	        					</div>
+	        					<div class="rq-input-item">
+	        						<div class="input-tit">
+	        							<span>희망시간</span><em class="primary">*</em>
+	        						</div>
+	        						
+	        						<!-- 오전 -->
+	        						<div class="rq-time-am">
+	        							<div class="sub-tit-wrap">
+	        								<h4 class="sub-tit">
+	        									오전
+	        								</h4>
+	        							</div>
+		        						<div class="rq-btn-wrap cols-table">
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="am9" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="am9">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">9:00</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="am9_30" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="am9_30">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">9:30</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="am10" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="am10">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">10:00</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="am10_30" name="time-chk" checked>
+			        							<label class="rq-time-btn btn" for="am10_30">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">10:30</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="am11" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="am11">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">11:00</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="am11_30" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="am11_30">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">11:30</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="am12" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="am12">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">12:00</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="am12_30" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="am12_30">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">12:30</p>
+			        							</label>
+			        						</div>
+		        						</div>
+	        						</div>
+	        						
+	        						<!-- 오후 -->
+	        						<div class="rq-time-pm">
+	        							<div class="sub-tit-wrap">
+	        								<h4 class="sub-tit">
+	        									오후
+	        								</h4>
+	        							</div>
+		        						<div class="rq-btn-wrap cols-table">
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="pm13" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="pm13">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">13:00</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="pm13_30" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="pm13_30">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">13:30</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="pm14" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="pm14">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">14:00</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="pm14_30" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="pm14_30">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">14:30</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="pm15" name="time-chk">
+			        							<label class="rq-time-btn btn" for="pm15">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">15:00</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="pm15_30" name="time-chk">
+			        							<label class="rq-time-btn btn" for="pm15_30">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">15:30</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="pm16" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="pm16">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">16:00</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="pm16_30" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="pm16_30">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">16:30</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="pm17" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="pm17">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">17:00</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="pm17_30" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="pm17_30">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">17:30</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="pm18" name="time-chk" disabled>
+			        							<label class="rq-time-btn btn" for="pm18">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">18:00</p>
+			        							</label>
+			        						</div>
+			        						<div class="rq-btn">
+			        							<input type="radio" class="time-chk" id="pm18_30" name="time-chk">
+			        							<label class="rq-time-btn btn" for="pm18_30">
+						                            <svg class="icon-sm">
+						                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+						                            </svg>
+			        								<p class="txt">18:30</p>
+			        							</label>
+			        						</div>
+		        						</div>
+	        						</div>
+	        						
+	        						<div class="request-service-card bg-w rounded-sm">
+	        							<div class="info-table">
+						                    <div class="info-rows">
+						                        <div class="info-head">서비스 기사명</div>
+						                        <div class="info-ctn">CUCKOO</div>
+						                    </div>
+						                    <div class="info-rows">
+						                        <div class="info-head">소속지점</div>
+						                        <div class="info-ctn">강남직영점</div>
+						                    </div>
+						                    <div class="info-rows">
+						                        <div class="info-head">방문 예정일</div>
+						                        <div class="info-ctn">2025-10-17 15:00</div>
+						                    </div>
+	        							</div>
+	        						</div>
+	        						
+	        						<div class="request-conmment primary">
+										※ 방문 일정 조율을 위해 방문 전 기사가 연락 드릴 예정입니다.
+										현장 상황에 따라 고객님께서 선택하신 희망 일정은 변경 될 수 있습니다.
+	        						</div>
+	        					</div>
+	        				</div>
+	        			</div>
+        			</div>
+        			
+        			<div class="request-apply-wrap" id="apply-03">
+	        			<div class="request-tit-wrap">
+	        				<span class="num rounded-md bg-b">3</span>
+	        				<h3 class="tit">
+	        					서비스 받으실 분 정보를 입력해주세요.
+	        				</h3>
+	        				<p class="txt">
+	        					신청자분 정보가 아닌 <b>서비스를 받으실 분</b> 정보로<br>접수 확인 문자를 발송합니다. 정확한 정보를 입력해주세요.
+	        				</p>
+	        			</div>
+	        			<div class="request-input-wrap bg-g">
+	        				<div class="request-input-list">
+	        					<div class="rq-input-item">
+	        						<div class="input-tit">
+	        							<span>고객명</span><em class="primary">*</em>
+	        						</div>
+	        						<input type="text" class="input-txt" id="rq-name-input" maxlength="4" placeholder="이름을 입력해주세요.">
+	        					</div>
+	        					<div class="rq-input-item">
+	        						<div class="input-tit">
+	        							<span>휴대폰 번호</span><em class="primary">*</em>
+	        						</div>
+	        						<input type="tel" class="input-txt" id="rq-tel-input" maxlength="11" placeholder="(-) 제외한 숫자만 입력해주세요.">
+	        					</div>
+	        					<div class="rq-input-item">
+	        						<div class="input-tit">
+	        							<span>추가 연락처</span><em class="primary">*</em>
+	        						</div>
+	        						<input type="tel" class="input-txt" id="rq-tel-input2" maxlength="11" placeholder="숫자만 입력 예) 01012345678">
+	        					</div>
+	        					<div class="rq-input-item">
+	        						<div class="input-tit">
+	        							<span>주소</span><em class="primary">*</em>
+	        						</div>
+	        						<div class="rq-address-wrap-1">
+	        							<input type="text" class="input-address" id="rq-zip-input" maxlength="5" placeholder="우편번호" readonly="readonly">
+	        							<button type="button" class="rq-zip-btn btn bg-b"><span>검색</span></button>
+	        						</div>
+									<div class="rq-address-wrap-2">
+										<input type="text" class="input-address w100" id="rq-address-input" placeholder="주소" readonly="readonly">
+										<input type="text" class="input-txt address-txt" id="rq-address-input2"  placeholder="나머지 주소를 입력해주세요.">
+									</div>
+	        					</div>
+	        					<div class="all-check-privacy rq-input-item">
+	        						<div class="input-tit">
+	        							<span>이용약관 동의</span><em class="primary">*</em>
+	        						</div>
+	        						<a class="privacy-all-btn btn wide-btn" onclick="openBottomSheet('/easyview/bottomSheet/termsCheck')">
+			                            <svg class="icon-sm">
+			                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+			                            </svg>
+        								<p class="txt">이용 약관을 확인해주세요.</p>
+	        						</a>
+	        					</div>
+	        				</div>
+	        			</div>
+        			</div>
+        			
+        			<div class="request-submit-wrap request-apply-wrap" id="apply-04">
+        				<a class="request-sub-btn btn wide-btn bg-b">
+        					<p class="txt">신청하기</p>
+        				</a>
+        			</div>
+        		</form>
+        	</section>
+        </div>
+    </main>
+</body>
+</html>

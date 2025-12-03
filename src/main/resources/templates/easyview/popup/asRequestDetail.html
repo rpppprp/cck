@@ -1,0 +1,70 @@
+<!-- 마이페이지 / AS 신청 내역 -->
+<div th:fragment="fragment">
+    <!-- fragment title (숨김) -->
+    <span class="fragment-title" style="display:none;">AS 신청 내역</span>
+    
+    
+	<div class="modal-container">
+	    <section class="as-history-area">
+	        <div class="wrap">
+	            <!-- 신청내역 없을때 -->
+	            <div class="as-hisrory-none" style="display:none;">
+	                <div class="none-txt">
+	                    A/S 이용 내역이 없습니다.
+	                </div>
+	            </div>
+	            <!-- 신청내역 테이블 // 내용 있을때 -->
+	            <div class="as-history-wrap">
+	                <div class="as-history-item">
+	                    <div class="info-table">
+	                        <div class="info-rows">
+	                            <div class="info-head">처리상태</div>
+	                            <div class="info-ctn"><span class="in_progress">진행중</span></div>
+	                        </div>
+	                        <div class="info-rows">
+	                            <div class="info-head">제품군</div>
+	                            <div class="info-ctn">밥솥</div>
+	                        </div>
+	                        <div class="info-rows">
+	                            <div class="info-head">모델명</div>
+	                            <div class="info-ctn">트윈프레셔 미니 전기압력밥솥</div>
+	                        </div>
+	                        <div class="info-rows">
+	                            <div class="info-head">서비스 신청일</div>
+	                            <div class="info-ctn">2025-10-10</div>
+	                        </div>
+	                        <div class="info-rows">
+	                            <div class="info-head">서비스 예정일</div>
+	                            <div class="info-ctn">2025-10-17 13:00</div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="as-history-item">
+	                    <div class="info-table">
+	                        <div class="info-rows">
+	                            <div class="info-head">처리상태</div>
+	                            <div class="info-ctn"><span class="confirm">완료</span></div>
+	                        </div>
+	                        <div class="info-rows">
+	                            <div class="info-head">제품군</div>
+	                            <div class="info-ctn">밥솥</div>
+	                        </div>
+	                        <div class="info-rows">
+	                            <div class="info-head">모델명</div>
+	                            <div class="info-ctn">트윈프레셔 미니 전기압력밥솥</div>
+	                        </div>
+	                        <div class="info-rows">
+	                            <div class="info-head">서비스 신청일</div>
+	                            <div class="info-ctn">2025-10-10</div>
+	                        </div>
+	                        <div class="info-rows">
+	                            <div class="info-head">서비스 예정일</div>
+	                            <div class="info-ctn">2025-10-17 13:00</div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+	</div>
+</div>

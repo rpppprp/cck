@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/easyview/layout/easyViewLayout}">
+<head>
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/renewal_content.css">
+    <script src="/js/esg/slick.min.js"></script>
+    <script src="/js/esg/renewal_content.js"></script>
+</head>
+<body>
+    <th:block layout:fragment="header" th:replace="/easyview/fragments/headerLayout :: headerSubLayout(title='고객 지원')"></th:block>
+
+    <main class="main">
+        <div layout:fragment="content" class="sub-container">
+        	<section class="support-title-area">
+        		<div class="wrap">
+	                <div class="sub-head-area">
+	                    <h1 class="tit">
+	                        고객님,<br>무엇을 도와드릴까요?
+	                    </h1>
+	                    <p class="txt">
+							제품에 이상이 있나요?<br>
+							쿠쿠 제품 관리 가이드로 셀프 진단을 해보세요.<br>
+							번거로운 AS 신청 없이 바로 해결 할 수 있습니다.<br>
+	                    </p>
+	                </div>
+        		</div>
+        	</section>
+        	<section class="supoort-info-area">
+        		<div class="wrap">
+        			<div class="support-tab">
+		                <ul class="sub-tab cols-3 rounded-lg">
+		                    <li class="sub-item rounded-lg" data-value="support-item01">
+		                        <a href="/easyview/support/01">
+		                            <svg class="icon-sm">
+		                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+		                            </svg>
+		                            <p class="txt">사용설명서</p>
+		                        </a>
+		                    </li>
+		                    <li class="sub-item rounded-lg" data-value="support-item02">
+		                        <a href="/easyview/support/02">
+		                            <svg class="icon-sm">
+		                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+		                            </svg>
+		                            <p class="txt">서비스영상</p>
+		                        </a>
+		                    </li>
+		                    <li class="sub-item rounded-lg on"  data-value="support-item03">
+		                        <a href="/easyview/support/03">
+		                            <svg class="icon-sm">
+		                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+		                            </svg>
+		                            <p class="txt">FAQ</p>
+		                        </a>
+		                    </li>
+		                </ul>
+        			</div>
+        			<div class="support-content">
+        				<div class="sub-tab-content support-fnq" id="support-item03">
+       						<div class="sub-title-wrap">
+       							<h1 class="sub-tit">FAQ</h1>
+       						</div>
+       						<ul class="cate-tab support-fnq-tab">
+       							<li class="cate-tab-item fnq-item on"><a>전체</a></li>
+       							<li class="cate-tab-item fnq-item"><a>제품문의</a></li>
+       							<li class="cate-tab-item fnq-item"><a>AS관련</a></li>
+       						</ul>
+       						<div class="support-fnq-list">
+       							<div class="support-fnb-item">
+       								<div class="faq-icon">
+			                            <svg class="icon-sm">
+			                                <use xlink:href="/images/easyview/icons/spriteImg.svg#question" />
+			                            </svg>
+       								</div>
+       								<div class="fnq-txt-wrap">
+       									<a>
+	       									<span class="fnq-cate">제품문의</span>
+	       									<p class="fnq-txt">
+	       										전기압력밥솥) 뚜껑 사이로 증기가 누설될 때
+	       									</p>
+       									</a>
+       								</div>
+       							</div>
+       							<div class="support-fnb-item">
+       								<div class="faq-icon">
+			                            <svg class="icon-sm">
+			                                <use xlink:href="/images/easyview/icons/spriteImg.svg#question" />
+			                            </svg>
+       								</div>
+       								<div class="fnq-txt-wrap">
+       									<a>
+	       									<span class="fnq-cate">제품문의</span>
+	       									<p class="fnq-txt">
+	       										전기압력밥솥) 밥이 되지 않아요!
+	       									</p>
+       									</a>
+       								</div>
+       							</div>
+       							<div class="support-fnb-item">
+       								<div class="faq-icon">
+			                            <svg class="icon-sm">
+			                                <use xlink:href="/images/easyview/icons/spriteImg.svg#question" />
+			                            </svg>
+       								</div>
+       								<div class="fnq-txt-wrap">
+       									<a>
+	       									<span class="fnq-cate">제품문의</span>
+	       									<p class="fnq-txt">
+	       										전기압력밥솥) 밥이 설익거나 퍼석할 때 또는 층밥이 될때
+	       									</p>
+       									</a>
+       								</div>
+       							</div>
+       							<div class="support-fnb-item">
+       								<div class="faq-icon">
+			                            <svg class="icon-sm">
+			                                <use xlink:href="/images/easyview/icons/spriteImg.svg#question" />
+			                            </svg>
+       								</div>
+       								<div class="fnq-txt-wrap">
+       									<a>
+	       									<span class="fnq-cate">제품문의</span>
+	       									<p class="fnq-txt">
+	       										전기압력밥솥) 콩(잡곡)이 설익습니다.
+	       									</p>
+       									</a>
+       								</div>
+       							</div>
+       							<div class="support-fnb-item">
+       								<div class="faq-icon">
+			                            <svg class="icon-sm">
+			                                <use xlink:href="/images/easyview/icons/spriteImg.svg#question" />
+			                            </svg>
+       								</div>
+       								<div class="fnq-txt-wrap">
+       									<a>
+	       									<span class="fnq-cate">A/S관련</span>
+	       									<p class="fnq-txt">
+	       										무상A/S기간 연장을 하면 몇개월 연장이 되나요?
+	       									</p>
+       									</a>
+       								</div>
+       							</div>
+       						</div>
+       						<div class="support-btn-wrap">
+       							<a class="btn wide-btn bg-w">
+       								<p class="txt">더 보기</p>
+       							</a>
+       						</div>
+        				</div>
+        			</div>
+        		</div>
+        	</section>
+        </div>
+    </main>
+</body>
+</html>

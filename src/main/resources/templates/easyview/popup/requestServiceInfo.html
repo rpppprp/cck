@@ -1,0 +1,134 @@
+<!-- AS신청 / 서비스 요금안내 -->
+<div th:fragment="fragment">
+    <!-- fragment title (숨김) -->
+    <span class="fragment-title" style="display:none;">서비스 요금 안내</span>
+    
+    
+	<div class="modal-container">
+	    <section class="rq-service-info-area">
+	        <div class="wrap">
+
+				<div class="service-info-wrap">
+				
+					<div class="pop_in_section">
+						<div class="dot_tit tit">요금 책정기준</div>
+						<div class="desc">
+							<table class="service_price_tb">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>부품비</th>
+										<td>제품 수리 시 부품교체가 발생 할 경우 소요되는 부품가격을 말합니다.</td>
+									</tr>
+									<tr>
+										<th>수리비(기술료)</th>
+										<td>유상 수리 시 부품비를 제외한 수리 난이도와 소요시간에 따른 순수 기술료를 말합니다.</td>
+									</tr>
+									<tr>
+										<th>출장비(출장점검료)</th>
+										<td>
+											
+											
+												유상수리 대상에 대하여 출장수리를 요구하는 경우 적용되며,<br>
+												출장비는 25,000원이 청구됩니다. (출장거리 무관)<br>
+												※ 단, 성수기(6~8월) 기간 내 특정 품목에 한하여 출장비 30,000원 적용됩니다.<br>
+												- 대상 : 에어컨(창문형/벽걸이), 냉장고, 냉동고, 김치냉장고<br>													
+												온라인 신청 시에는 출장비 3,000원 할인 혜택이 자동 적용됩니다.<br>
+											
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<ul class="star_list">
+								<li>서비스 종류에 따라 최종 서비스 요금이 책정 됩니다. (무상수리 및 부품교체 필요 없는 경우 출장비만 발생)</li>
+							</ul>
+						</div>
+					</div>
+					<div class="pop_in_section">
+						<div class="dot_tit tit">유무상 수리기준</div>
+						<div class="desc">
+							<table class="service_price_tb">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>무상수리</th>
+										<td>
+											<ul class="bul_list">
+												<li>품질 보증기간 이내에 정상적인 사용상태에서 발생되는 성능, 기능상의 고장인 경우</li>
+												<li>당사 서비스센터를 통한 수리 후 3개월 이내 동일부위 재고장 발생한 경우</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>유상수리</th>
+										<td>
+											<ul class="bul_list">
+												<li>품질보증기간이 경과 된 제품 수리 시</li>
+												<li>고객부주의로 수리 시(이동,낙하,충격,파손,사용설명서내의 주의사항을 지키지 않아<br>
+												고장발생 / 무리한 작동 등) </li>
+												<li>당사 서비스센터 외의 곳에서 부당한 수리, 개조로 인한 고장 시</li>
+												<li>천재지변으로 인한 고장 시 (낙뢰,이상전원,화재,지진,풍수해,해일 등)</li>
+												<li>정상적으로 사용하여 마모 된 소모성 부품을 교환하는 경우</li>
+												<li>사용전원의 이상 및 접속기기의 불량으로 인한 고장 시</li>
+											</ul>
+										</td>
+
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="pop_in_section">
+						<div class="dot_tit tit">보증기간 안내</div>
+						<div class="desc">
+							<table class="service_price_tb">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>제품보증기간</th>
+										<td>구입일자를 기준으로 산정하며, 구입일자의 확인은 제품보증서(구입영수증)를<br>기준으로 함</td>
+									</tr>
+									<tr>
+										<th>제품보증서 없는 경우</th>
+										<td>유통기간을 감안하여 생산년월(제조번호)을 기준으로 6개월을 추가하여 구입일자를<br>적용하여 보증시간을 산정함.</td>
+									</tr>
+									<tr>
+										<th>보증기간을<br>단축 적용하는 경우</th>
+										<td>
+											<ul class="bul_list">
+												<li>일반 가정용 제품을 영업용도나 영업장에서 사용할 경우 </li>
+												<li>(단,영업용/업소용 제품은 제외)</li>
+												<li>차량,선박 등에 탑재하는 등 정상적인 사용환경이 아닌 곳에서 사용한 경우</li>
+												<li>중고품 (전파상, 모조품) 구입 시 보증기간은 적용되지 않으며 수리불가의 경우<br>피해보상을 책임지지 않음</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>품목별 보증기간</th>
+										<td>
+											<ul class="bul_list">
+												<li>일반제품 : 1년 (선풍기 등 계절성 제품을 제외한 전 제품)</li>
+												<li>계절성제품 : 2년 (선풍기 등)</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+	         
+	        </div>
+	    </section>
+	</div>
+</div>

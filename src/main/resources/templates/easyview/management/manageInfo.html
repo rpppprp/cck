@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{easyview/layout/easyViewLayout}">
+<body>
+    <th:block layout:fragment="header" th:replace="~{/easyview/fragments/headerLayout :: headerSubLayout(title='관리 카드')}"></th:block>
+	<th:block th:replace="~{/easyview/fragments/subTabsLayout :: subTabsLayout(tabsIndex=${tabsIndex})}"></th:block>
+
+    <main class="main">
+        <div layout:fragment="content" class="sub-container">
+            <section class="manage-card-area">
+            	<div class="wrap">
+	                <div class="manage-card">
+	                    <div class="manage-card-info">
+	                        <div class="manage-card-txt">
+	                            <h1 class="greetings">
+	                                일상을<br>쿠쿠하세요
+	                            </h1>
+	                            <div class="manager">강남구 담당 ㅇㅇㅇ</div>
+	                        </div>
+	                        <div class="manage-card-img">
+	                            <img src="/images/easyview/cuckoo-service.svg">
+	                        </div>
+	                    </div>
+	                    <div class="manage-card-date">
+	                        <svg class="icon-sm">
+	                            <use xlink:href="/images/easyview/icons/spriteImg.svg#calendar" />
+	                        </svg>
+	                        <div class="date">
+	                            <p class="subtit">방문 예정일</p>
+	                            <span class="txt">2025년 10월 28일</span>
+	                        </div>
+	                    </div>
+	                </div>
+            	</div>
+            </section>
+            
+            <section class="manage-info-area">
+            	<div class="wrap">
+	            	<div class="manage-tab">
+		                <ul class="sub-tab rounded-lg cols-2">
+		                    <li class="sub-item rounded-lg on" data-value="manage-item01">
+		                        <a href="/easyview/management/01">
+		                            <svg class="icon-sm">
+		                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+		                            </svg>
+		                            <p class="txt">고객정보</p>
+		                        </a>
+		                    </li>
+		                    <li class="sub-item rounded-lg" data-value="manage-item02">
+		                        <a href="/easyview/management/02">
+		                            <svg class="icon-sm">
+		                                <use xlink:href="/images/easyview/icons/spriteImg.svg#chk" />
+		                            </svg>
+		                            <p class="txt">점검이력</p>
+		                        </a>
+		                    </li>
+		                </ul>
+	            	</div>
+					<div class="manage-content">
+					
+						<!-- 고객정보 테이블 -->
+						<div class="sub-tab-content manage-use" id="manage-item01">
+			                <div class="info-table">
+			                    <div class="info-rows">
+			                        <div class="info-head">고객코드</div>
+			                        <div class="info-ctn">2024*4508350</div>
+			                    </div>
+			                    <div class="info-rows">
+			                        <div class="info-head">고객성명</div>
+			                        <div class="info-ctn">박*호</div>
+			                    </div>
+			                    <div class="info-rows">
+			                        <div class="info-head">제품명</div>
+			                        <div class="info-ctn">쿠쿠 정수기 스팀100</div>
+			                    </div>
+			                    <div class="info-rows">
+			                        <div class="info-head">관리유형</div>
+			                        <div class="info-ctn">택배</div>
+			                    </div>
+			                    <div class="info-rows">
+			                        <div class="info-head">관리주기</div>
+			                        <div class="info-ctn">6개월</div>
+			                    </div>
+			                </div>
+						</div>
+						
+					</div>
+            	</div>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>

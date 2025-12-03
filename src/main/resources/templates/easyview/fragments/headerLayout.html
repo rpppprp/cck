@@ -1,0 +1,72 @@
+<th:block th:fragment="headerLayout(title)">
+	<header class="header">
+	    <nav class="main-gnb gnb">
+	        <div class="wrap">
+	            <div class="gnb-left">
+	                <a href="/easyview/" class="logo">
+	                    <img src="/images/easyview/cuckoo_logo.svg">
+	                </a>
+	            </div>
+	            <div class="gnb-right">
+	                <a class="menu">
+	                    <svg class="icon-sm">
+	                        <use xlink:href="/images/easyview/icons/spriteImg.svg#burger" />
+	                    </svg>
+	                </a>
+	            </div>
+	        </div>
+	    </nav>
+	</header>
+</th:block>
+<th:block th:fragment="headerSubLayout(title)">
+	<header class="header">
+	    <nav class="sub-gnb gnb">
+	        <div class="wrap">
+	            <div class="gnb-left">
+	                <a class="back-icon" href="javascript:history.back()">
+	                    <svg class="icon-sm">
+	                        <use xlink:href="/images/easyview/icons/spriteImg.svg#left-arrow" />
+	                    </svg>
+	                </a>
+	                <h1 class="sub-location" th:text="${title}">
+	                    위치
+	                </h1>
+	            </div>
+	            <div class="gnb-right">
+	                <a class="menu">
+	                    <svg class="icon-sm">
+	                        <use xlink:href="/images/easyview/icons/spriteImg.svg#burger" />
+	                    </svg>
+	                </a>
+	            </div>
+	        </div>
+	    </nav>     
+	</header>
+</th:block>
+
+<th:block th:fragment="headerMypageLayout(title)">
+	<header class="header">
+	    <nav class="sub-gnb gnb">
+	        <div class="wrap">
+	            <div class="gnb-left">
+	                <a class="back-icon" href="javascript:history.back()">
+	                    <svg class="icon-sm">
+	                        <use xlink:href="/images/easyview/icons/spriteImg.svg#left-arrow" />
+	                    </svg>
+	                </a>
+	                <h1 class="sub-location" th:text="${title}">
+	                    위치
+	                </h1>
+	            </div>
+	            <div class="gnb-right">
+	                <a class="menu">
+	                    <svg class="icon-md">
+	                        <use xlink:href="/images/easyview/icons/spriteImg.svg#burger" />
+	                    </svg>
+	                </a>
+	            </div>
+	        </div>
+	    </nav>     
+	</header>
+</th:block>
+

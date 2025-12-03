@@ -1,0 +1,25 @@
+<!-- 공통 풀 모달 fragment -->
+<div th:fragment="fullModal" class="fullmodal-wrap" style="display:none">
+    <div id="fullModal" class="full-modal-container">
+        <header class="mobile-header">
+            <div class="wrap">
+                <div class="mo-header-left">
+                	<h1 class="location-txt" th:text="${title}">gggg</h1>
+                </div>
+                <div class="mo-header-right">
+                    <a class="modal-close-btn" onclick="closePopUp()">
+                        <svg class="icon-sm">
+                            <use xlink:href="/images/easyview/icons/spriteImg.svg#close" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="full-modal-content">
+            <!-- 여기에 Ajax로 내용이 들어감 -->
+            <div id="fullModal-content">
+            	
+            </div>
+        </div>
+    </div>
+</div>

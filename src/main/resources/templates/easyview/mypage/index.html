@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/easyview/layout/easyViewLayout}">
+<head>
+	<style>
+		.sub-tab-wrap {
+			display:none;
+		}
+	</style>
+</head>
+<body>
+    <th:block layout:fragment="header" th:replace="/easyview/fragments/headerLayout :: headerMypageLayout(title='마이페이지')"></th:block>
+
+    <main class="main">
+        <div layout:fragment="content" class="sub-container">
+        	<section class="mypage-menber-area">
+        		<div class="wrap">
+	                <div class="mypage-member-card">
+	                    <div class="mypage-member-info">
+	                        <div class="member-name">
+	                            <h1 class="name">CUCKOO</h1>
+	                            <p>님</p>
+	                        </div>
+	                        <p class="member-code">2024*4508350</p>
+	                    </div>
+	                </div>
+        		</div>
+        	</section>
+        	<section class="mypage-menu-area">
+        		<div class="wrap">
+	                <div class="sub-menu-wrap">
+	                	<div class="sub-menu-item">
+	                		<a href="">
+	                			<span class="rounded-sm bg-g">
+				                    <svg class="icon-md">
+				                        <use xlink:href="/images/easyview/icons/spriteImg.svg#mypage-01" />
+				                    </svg>
+	                			</span>
+	                			<p class="menu-txt">
+	                				방문관리 내역
+	                			</p>
+	                		</a>
+	                	</div>
+	                	<div class="sub-menu-item">
+	                		<a onclick="openPopUp('/easyview/popup/asRequestDetail')">
+	                			<span class="rounded-sm bg-g">
+				                    <svg class="icon-md">
+				                        <use xlink:href="/images/easyview/icons/spriteImg.svg#mypage-02" />
+				                    </svg>
+	                			</span>
+	                			<p class="menu-txt">
+	                				AS 신청 내역
+	                			</p>
+	                		</a>
+	                	</div>
+	                	<div class="sub-menu-item">
+	                		<a>
+	                			<span class="rounded-sm bg-g">
+				                    <svg class="icon-md">
+				                        <use xlink:href="/images/easyview/icons/spriteImg.svg#mypage-03" />
+				                    </svg>
+	                			</span>
+	                			<p class="menu-txt">
+	                				개인정보 수정
+	                			</p>
+	                		</a>
+	                	</div>
+	                </div>
+        		</div>
+        	</section>
+        </div>
+    </main>
+</body>
+</html>
