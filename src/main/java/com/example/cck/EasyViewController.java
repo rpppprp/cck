@@ -29,7 +29,7 @@ public class EasyViewController {
 		session.removeAttribute("tempUser");
 		session.removeAttribute("authType");
 
-		return "/easyview/login/index";
+		return "easyview/login/index";
 	}
 
 	// 관리 카드
@@ -42,7 +42,7 @@ public class EasyViewController {
 		session.removeAttribute("tempUser");
 		session.removeAttribute("authType");
 
-		return "/easyview/management/manageInfo";
+		return "easyview/management/manageInfo";
 	}
 
 	// 점검이력
@@ -54,13 +54,13 @@ public class EasyViewController {
 		session.removeAttribute("tempUser");
 		session.removeAttribute("authType");
 
-		return "/easyview/management/manageHistory";
+		return "easyview/management/manageHistory";
 	}
 
 	// 점검이력 - 바텀시트
 	@GetMapping("/easyview/bottomSheet/inspectionHistory")
 	public String openBottomSheetInspectionHistory() {
-		return "/easyview/bottomSheet/inspectionHistory :: fragment";
+		return "easyview/bottomSheet/inspectionHistory :: fragment";
 	}
 
 	// 내 렌탈정보
@@ -72,7 +72,7 @@ public class EasyViewController {
 		session.removeAttribute("tempUser");
 		session.removeAttribute("authType");
 
-		return "/easyview/rental/index";
+		return "easyview/rental/index";
 	}
 
 	// 제품 안내
@@ -83,7 +83,7 @@ public class EasyViewController {
 		session.removeAttribute("tempUser");
 		session.removeAttribute("authType");
 
-		return "/easyview/product/index";
+		return "easyview/product/index";
 	}
 
 	// 고객지원
@@ -95,7 +95,7 @@ public class EasyViewController {
 		session.removeAttribute("tempUser");
 		session.removeAttribute("authType");
 
-		return "/easyview/support/supportManual";
+		return "easyview/support/supportManual";
 	}
 
 	// 서비스영상
@@ -106,13 +106,13 @@ public class EasyViewController {
 		session.removeAttribute("tempUser");
 		session.removeAttribute("authType");
 
-		return "/easyview/support/supportVideo";
+		return "easyview/support/supportVideo";
 	}
 
 	// 서비스영상 - 바텀시트
 	@GetMapping("/easyview/bottomSheet/videoSelect")
 	public String openBottomSheetVideoSelect() {
-		return "/easyview/bottomSheet/videoSelect :: fragment";
+		return "easyview/bottomSheet/videoSelect :: fragment";
 	}
 
 	// FaQ
@@ -123,7 +123,7 @@ public class EasyViewController {
 		session.removeAttribute("tempUser");
 		session.removeAttribute("authType");
 
-		return "/easyview/support/supportFaq";
+		return "easyview/support/supportFaq";
 	}
 
 	// 소모품 구매
@@ -134,13 +134,13 @@ public class EasyViewController {
 		session.removeAttribute("tempUser");
 		session.removeAttribute("authType");
 
-		return "/easyview/supplies/index";
+		return "easyview/supplies/index";
 	}
 
 	// 소모품 구매 - 제품군 구매리스트 modal
 	@GetMapping("/easyview/popup/suppliesDetail")
 	public String openModalSuppliesDetail(Model model) {
-		return "/easyview/popup/suppliesDetail :: fragment";
+		return "easyview/popup/suppliesDetail :: fragment";
 	}
 
 	// as 신청
@@ -151,19 +151,19 @@ public class EasyViewController {
 		session.removeAttribute("tempUser");
 		session.removeAttribute("authType");
 
-		return "/easyview/request/index";
+		return "easyview/request/index";
 	}
 
 	// as 신청 - 바텀시트
 	@GetMapping("/easyview/bottomSheet/termsCheck")
 	public String openBottomSheetTermsCheck() {
-		return "/easyview/bottomSheet/termsCheck :: fragment";
+		return "easyview/bottomSheet/termsCheck :: fragment";
 	}
 
 	// as 신청 - 서비스요금 안내 modal
 	@GetMapping("/easyview/popup/requestServiceInfo")
 	public String openModalRequestServiceInfo(Model model) {
-		return "/easyview/popup/requestServiceInfo :: fragment";
+		return "easyview/popup/requestServiceInfo :: fragment";
 	}
 
 	// my page
@@ -173,13 +173,13 @@ public class EasyViewController {
 		session.removeAttribute("tempUser");
 		session.removeAttribute("authType");
 
-		return "/easyview/mypage/index";
+		return "easyview/mypage/index";
 	}
 
 	// my page - as신청내역 modal
 	@GetMapping("/easyview/popup/asRequestDetail")
 	public String openModalAsRequestDetail(Model model) {
-		return "/easyview/popup/asRequestDetail :: fragment";
+		return "easyview/popup/asRequestDetail :: fragment";
 	}
 
 }
