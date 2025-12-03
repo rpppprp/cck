@@ -31,7 +31,7 @@
 <div class="wrap">
     <header id="sub-header">
         <header layout:fragment="header"></header>
-        <th:block th:replace="~{/easyview/fragments/subTabsLayout :: subTabsLayout(${tabsIndex})}"></th:block>
+        <th:block th:replace="~{easyview/fragments/subTabsLayout :: subTabsLayout(${tabsIndex})}"></th:block>
     </header>
     <!-- //header-->
     <!--container-->
@@ -44,13 +44,13 @@
     </div>
     
     <!-- full-modal -->
-	<th:block th:replace="~{/easyview/fragments/fullModal :: fullModal}"></th:block>
+	<th:block th:replace="~{easyview/fragments/fullModal :: fullModal}"></th:block>
     <!-- bottom Sheet Pop-up -->
-	<th:block th:replace="~{/easyview/fragments/bottomSheet :: bottomSheet}"></th:block>
+	<th:block th:replace="~{easyview/fragments/bottomSheet :: bottomSheet}"></th:block>
     <!-- bottom navigation -->
-    <th:block th:replace="~{/easyview/fragments/bottomNavigation :: bottomNavigation(selectedIndex=${selectedIndex})}"></th:block>
+    <th:block th:replace="~{easyview/fragments/bottomNavigation :: bottomNavigation(selectedIndex=${selectedIndex})}"></th:block>
     <!-- mobile GNB -->
-    <th:block th:replace="~{/easyview/fragments/mobileGnbLayout :: mobileGnbLayout}"></th:block>
+    <th:block th:replace="~{easyview/fragments/mobileGnbLayout :: mobileGnbLayout}"></th:block>
     <div id="ui_layer"></div>
 </div>
 
